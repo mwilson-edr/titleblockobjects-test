@@ -1,0 +1,68 @@
+<?xml version="1.0"?><genericobjects>
+<templatefields>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 1</fieldname><alignment>0</alignment><labletext>Test Elements 1</labletext><lablefontsize>6</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>2</labelXoffset><labelYoffset>1</labelYoffset><borderwidth>1.5</borderwidth>
+<points>21,26,74,35</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 2</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>21,46,74,55</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 3</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>21,66,74,75</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 4</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>21,86,74,95</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>true</istoflatten><fieldname>ImageYearField</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>81,26,134,35</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 6</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>81,46,134,55</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 7</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>81,66,134,75</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation></templatefield>
+<templatefield><istoflatten>false</istoflatten><fieldname>Field 8</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>81,86,134,95</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><istoflatten>true</istoflatten><fieldname>TPSiteName</fieldname><alignment>2</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<points>290,75,540,90</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+</templatefields>
+<annotationobjects><TitleBlockCallout><StampPos>LL</StampPos><RectPoints>480,720,560,735</RectPoints><LinePoints>306,449,520,600,520,720</LinePoints></TitleBlockCallout><TitleBlockCallout><StampPos>LR</StampPos><RectPoints>50,720,130,735</RectPoints><LinePoints>306,449,90,600,90,720</LinePoints></TitleBlockCallout><TitleBlockCallout><StampPos>UL</StampPos><RectPoints>480,165,560,180</RectPoints><LinePoints>306,449,520,300,520,180</LinePoints></TitleBlockCallout><TitleBlockCallout><StampPos>UR</StampPos><RectPoints>50,165,130,180</RectPoints><LinePoints>306,449,90,300,90,180</LinePoints></TitleBlockCallout></annotationobjects>
+<rectobjects>
+<rectobject><points>20,25,75,45</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>20,45,75,65</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>20,65,75,85</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>20,85,75,105</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>80,25,135,45</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>80,45,135,65</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>80,65,135,85</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>80,85,135,105</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>140,25,280,105</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>290,25,540,90</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>290,90,540,105</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>545,25,585,90</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+<rectobject><points>545,90,585,105</points><rgb>0,0,0</rgb><linewidth>1</linewidth></rectobject>
+</rectobjects>
+<labelobjects>
+<labelobject><points>21,39</points><labeltext>Approved By:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>21,59</points><labeltext>Checked By:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>21,79</points><labeltext>Drawn By:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>21,99</points><labeltext>Project Manager:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>81,39</points><labeltext>Date:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>81,59</points><labeltext>Filename:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>81,79</points><labeltext>Scale:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>81,99</points><labeltext>Project Number:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+</labelobjects>
+</genericobjects>
