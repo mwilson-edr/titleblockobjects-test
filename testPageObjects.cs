@@ -12,85 +12,115 @@ namespace TestHarnessCSharp
 
         bool m_isDisposed;
 
+        private List<csharppdf.LabelObjects> m_thisLabelList;
+            
+        //alignment
+        //0=left
+        //1=right
+        //2=center
         private List<iTextSharp.text.pdf.TextField> m_thisFieldList;
 
         private List<csharppdf.AnnotationObjects > m_thisAnnotationList;
 
         private List<iTextSharp.text.pdf.PdfLine> m_thisLineList;
 
-        private List<iTextSharp.text.pdf.PdfRectangle> m_thisRectList;
+        private List<iTextSharp.text.Rectangle > m_thisRectList;
+
+        public List<csharppdf.LabelObjects > LabelList
+        {
+            get { return m_thisLabelList; }
+        }
+
+        public List<iTextSharp.text.pdf.TextField > TextFieldList
+        {
+            get { return m_thisFieldList; }
+        }
+
+        public List<iTextSharp.text.Rectangle> RectFieldList
+        {
+            get{return m_thisRectList;}
+        }
 
         /// <summary>
         /// Initialize the object collection with xml.
         /// </summary>
         /// <param name="inXML">input XML to parse into field/page objects</param>
-        public void Initialize(string inXML,iTextSharp.text.pdf.PdfWriter inWriter,iTextSharp.text.pdf.PdfStamper inStamper)
+        public void Initialize(string inXML, iTextSharp.text.pdf.PdfStamper inStamper)
         {
             XDocument xdoc = XDocument.Parse(inXML);
 
-            XElement templatefields = xdoc.Element("templatefields");
-            XElement annotationobjects = xdoc.Element("annotationobjects");
-            XElement lineobjects = xdoc.Element("lineobjects");
-            XElement rectobjects = xdoc.Element("rectobjects");
-
-            //foreach templatefield
+            iTextSharp.text.pdf.BaseFont bf = iTextSharp.text.pdf.BaseFont.CreateFont(iTextSharp.text.pdf.BaseFont.HELVETICA, iTextSharp.text.pdf.BaseFont.CP1252, iTextSharp.text.pdf.BaseFont.NOT_EMBEDDED);
 
             var str = XElement.Parse(inXML);
 
-            var fields = str.Elements("templatefields").ToList();
+            //text fields
+            var tempfields = str.Elements("templatefields").ToList();
+            var fields = tempfields.Elements("templatefield").ToList();
+
+            if (fields.Count >0 )
+            {
+                m_thisFieldList = new List<iTextSharp.text.pdf.TextField>();
+            }
 
             foreach (XElement thisXMLField in fields)
             {
                 
-                float thisR;
-                float thisG;
-                float thisB;
                 bool thisFlatten;
                 string thisFieldName;
                 Rectangle thisBBox;
-                float thisBBoxLLX;
-                float thisBBoxLLY;
-                float thisBBoxURX;
-                float thisBBoxURY;
+                int thisAlignment=0;
+
+                var points = thisXMLField.Element("points");
+                var rgb = thisXMLField.Element("rgb");
+
+                string[] rectPointsArray = points.Value.ToString().Split(',');
+                string[] rectRGBArray = rgb.Value.ToString().Split(',');
 
                 thisFieldName = thisXMLField.Element("fieldname").Value.ToString();
-                float.TryParse(thisXMLField.Element("boundingcolorR").Value, out  thisR);
-                float.TryParse(thisXMLField.Element("boundingcolorG").Value, out  thisG);
-                float.TryParse(thisXMLField.Element("boundingcolorB").Value, out  thisB);
-                bool.TryParse (thisXMLField.Element ("isFlatten").Value ,out thisFlatten );
-                float.TryParse(thisXMLField.Element("BBoxLLX").Value, out thisBBoxLLX);
-                float.TryParse(thisXMLField.Element("BBoxLLY").Value, out thisBBoxLLY);
-                float.TryParse(thisXMLField.Element("BBoxURX").Value, out thisBBoxURX);
-                float.TryParse(thisXMLField.Element("BBoxURY").Value, out thisBBoxURY);
+                bool.TryParse (thisXMLField.Element ("istoflatten").Value ,out thisFlatten);
+                int.TryParse(thisXMLField.Element("alignment").Value, out thisAlignment);
+
                 //et cetera
 
-                thisBBox = new Rectangle(thisBBoxLLX, thisBBoxLLY, thisBBoxURX, thisBBoxURY);
+                thisBBox = new iTextSharp.text.Rectangle(float.Parse(rectPointsArray[0]),float.Parse( rectPointsArray[1]), float.Parse(rectPointsArray[2]), float.Parse (rectPointsArray[3]));
+                if (rectRGBArray.Length > 1)
+                {
+                    thisBBox.BorderColor = new BaseColor(int.Parse(rectRGBArray[0]), int.Parse(rectRGBArray[1]), int.Parse(rectRGBArray[2]));
+                }
 
-                iTextSharp.text.pdf.TextField tempField = new iTextSharp.text.pdf.TextField(inWriter, thisBBox , thisFieldName);
+                iTextSharp.text.pdf.TextField tempField = new iTextSharp.text.pdf.TextField(inStamper.Writer, thisBBox , thisFieldName);
 
-                BaseColor thisBaseColor = new BaseColor(thisR  , thisG,thisB );
-                tempField.BorderColor = thisBaseColor;
-                if (thisFlatten )
+                if (thisFlatten)
                 {
                     inStamper.PartialFormFlattening(thisFieldName);
+                }
+
+                //alignment = default left=0
+                if(thisAlignment>0)
+                {
+                    tempField.Alignment = thisAlignment;
                 }
 
                 m_thisFieldList.Add(tempField);
             }
 
-            //Console.WriteLine(result);
+            //annotations
+            tempfields = str.Elements("annotationobjects").ToList();
+            var annotations = tempfields.Elements("annotationobject").ToList();
+            if (annotations.Count()>0)
+            {
+                m_thisAnnotationList = new List<csharppdf.AnnotationObjects>();
+            }
 
-            //read for annotations etc
-            var annotations = str.Elements("annotationobjects").ToList();
             foreach (XElement thisXMLField in annotations)
             {
                 csharppdf.AnnotationObjects thisAnno = new csharppdf.AnnotationObjects();
 
-                iTextSharp.text.pdf.PdfAppearance highlight_ap = iTextSharp.text.pdf.PdfAppearance.CreateAppearance(inWriter, 100, 25);
+                iTextSharp.text.pdf.PdfAppearance highlight_ap = iTextSharp.text.pdf.PdfAppearance.CreateAppearance(inStamper.Writer, 100, 25);
                 //add color from xml
                 highlight_ap.SetColorFill(iTextSharp.text.BaseColor.RED);
                 //add font and size from xml
-                highlight_ap.SetFontAndSize(thisBaseFont, 11);
+                highlight_ap.SetFontAndSize(bf, 11);
 
                 string rectPointsString = thisXMLField.Element("RectPoints").Value.ToString();
                 string linePointsString = thisXMLField.Element("LinePoints").Value.ToString();
@@ -98,7 +128,7 @@ namespace TestHarnessCSharp
                 string[] rectPointsArray = rectPointsString.Split(',');
                 string[] linePointsArray = linePointsString.Split(',');
 
-                iTextSharp.text.pdf.PdfAnnotation aCallOut = iTextSharp.text.pdf.PdfAnnotation.CreateFreeText(inWriter , new iTextSharp.text.Rectangle(float.Parse(rectPointsArray[0]), float.Parse(rectPointsArray[1]), float.Parse(rectPointsArray[2]), float.Parse(rectPointsArray[3])), "Target Property", highlight_ap);
+                iTextSharp.text.pdf.PdfAnnotation aCallOut = iTextSharp.text.pdf.PdfAnnotation.CreateFreeText(inStamper.Writer , new iTextSharp.text.Rectangle(float.Parse(rectPointsArray[0]), float.Parse(rectPointsArray[1]), float.Parse(rectPointsArray[2]), float.Parse(rectPointsArray[3])), "Target Property", highlight_ap);
                 int[] CalloutPoints = { int.Parse(linePointsArray[0]), int.Parse(linePointsArray[1]), int.Parse(linePointsArray[2]), int.Parse(linePointsArray[3]), int.Parse(linePointsArray[4]), int.Parse(linePointsArray[5]) };
                 thisAnno.InitializeCallout(CalloutPoints);
                 aCallOut = thisAnno.GenerateCallOutBox(aCallOut);
@@ -109,7 +139,57 @@ namespace TestHarnessCSharp
 
             //same for lines
 
-            //same for rects
+            //rects
+            tempfields = str.Elements("rectobjects").ToList();
+            var rects = tempfields.Elements("rectobject").ToList();
+            if(rects.Count()>0)
+            {
+                m_thisRectList = new List<iTextSharp.text.Rectangle>();
+            }
+            
+            foreach (XElement thisXMLRect in rects)
+            {
+                var points = thisXMLRect.Element("points");
+                var rgb = thisXMLRect.Element("rgb");
+                string linewidth = thisXMLRect.Element("linewidth").Value.ToString();
+
+                string[] rectPointsArray=points.Value.ToString().Split(',');
+                string[] rectRGBArray = rgb.Value.ToString().Split(',');
+
+
+
+                iTextSharp.text.Rectangle temprect = new iTextSharp.text.Rectangle(float.Parse(rectPointsArray[0]),float.Parse( rectPointsArray[1]), float.Parse(rectPointsArray[2]), float.Parse (rectPointsArray[3]));
+                temprect.BorderColor = new BaseColor(int.Parse(rectRGBArray[0]), int.Parse(rectRGBArray[1]), int.Parse(rectRGBArray[2]));
+                temprect.BorderWidth = float.Parse(linewidth);
+                temprect.Border = iTextSharp.text.Rectangle.BOX;
+
+                m_thisRectList.Add(temprect);
+            }
+
+            //labels
+            tempfields = str.Elements("labelobjects").ToList();
+            var labels = tempfields.Elements("labelobject").ToList();
+
+            if (labels.Count()>0)
+            {
+                m_thisLabelList =new List<csharppdf.LabelObjects> ();
+            }
+
+            foreach (XElement thisXMLLabel in labels )
+            {
+
+                csharppdf.LabelObjects templabel=new csharppdf.LabelObjects ();
+                var points = thisXMLLabel.Element("points");
+                string[] labelPointsArray=points.Value.ToString().Split(',');
+
+                templabel.LabelText=thisXMLLabel.Element ("labeltext").Value.ToString ();
+                templabel.LabelX =int.Parse(labelPointsArray [0]);
+                templabel.LabelY =int.Parse(labelPointsArray [1]);
+                templabel.LabelFontSize =int.Parse(thisXMLLabel.Element("labelfontsize").Value.ToString());
+
+                m_thisLabelList.Add (templabel);
+            }
+
 
 
 
