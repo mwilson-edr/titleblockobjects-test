@@ -1,40 +1,70 @@
 <?xml version="1.0"?><genericobjects>
 <templatefields>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 1</fieldname><alignment>0</alignment><labletext>Test Elements 1</labletext><lablefontsize>6</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>2</labelXoffset><labelYoffset>1</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 1</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>2</labelXoffset><labelYoffset>1</labelYoffset>
 <points>21,26,74,35</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 2</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 2</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>21,46,74,55</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 3</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 3</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>21,66,74,75</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 4</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 4</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>21,86,74,95</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>true</istoflatten><fieldname>ImageYearField</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>true</istoflatten><fieldname>ImageYearField</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>81,26,134,35</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 6</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 6</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>81,46,134,55</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 7</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 7</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>81,66,134,75</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation></templatefield>
-<templatefield><istoflatten>false</istoflatten><fieldname>Field 8</fieldname><alignment>0</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>false</istoflatten><fieldname>Field 8</fieldname><alignment>0</alignment><fieldvalue></fieldvalue><textboxfontsize>6</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
 <points>81,86,134,95</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation>
 </templatefield>
-<templatefield><istoflatten>true</istoflatten><fieldname>TPSiteName</fieldname><alignment>2</alignment><labletext>Test Elements 2</labletext><lablefontsize>67</lablefontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset><borderwidth>1.5</borderwidth>
-<points>290,75,540,90</points>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>true</istoflatten><fieldname>TPSiteName</fieldname><alignment>1</alignment><fieldvalue></fieldvalue><textboxfontsize>12</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>290,65,540,80</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>true</istoflatten><fieldname>TPAddr</fieldname><alignment>1</alignment><fieldvalue></fieldvalue><textboxfontsize>8</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>290,55,540,65</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><fieldvisibility>1</fieldvisibility><istoflatten>true</istoflatten><fieldname>TPCityState</fieldname><alignment>1</alignment><fieldvalue></fieldvalue><textboxfontsize>8</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>290,45,540,55</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><fieldvisibility>4</fieldvisibility><istoflatten>true</istoflatten><fieldname>ReportType</fieldname><alignment>1</alignment><fieldvalue>SANBORN  MAP</fieldvalue><textboxfontsize>12</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>290,90,540,105</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><fieldvisibility>4</fieldvisibility><istoflatten>true</istoflatten><fieldname>ExhibitNumber</fieldname><alignment>1</alignment><fieldvalue>2</fieldvalue><textboxfontsize>14</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>545,45,585,65</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><fieldvisibility>2</fieldvisibility><istoflatten>true</istoflatten><fieldname>ReportType</fieldname><alignment>1</alignment><fieldvalue>AERIAL PHOTOGRAPH</fieldvalue><textboxfontsize>12</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>290,90,540,105</points>
+<rgb></rgb>
+<BBoxRotation></BBoxRotation>
+</templatefield>
+<templatefield><fieldvisibility>2</fieldvisibility><istoflatten>true</istoflatten><fieldname>ExhibitNumber</fieldname><alignment>1</alignment><fieldvalue>3</fieldvalue><textboxfontsize>14</textboxfontsize><imagepath>www.google.com/img</imagepath><labelXoffset>17</labelXoffset><labelYoffset>31</labelYoffset>
+<points>545,45,585,65</points>
 <rgb></rgb>
 <BBoxRotation></BBoxRotation>
 </templatefield>
@@ -64,5 +94,6 @@
 <labelobject><points>81,59</points><labeltext>Filename:</labeltext><labelfontsize>6</labelfontsize></labelobject>
 <labelobject><points>81,79</points><labeltext>Scale:</labeltext><labelfontsize>6</labelfontsize></labelobject>
 <labelobject><points>81,99</points><labeltext>Project Number:</labeltext><labelfontsize>6</labelfontsize></labelobject>
+<labelobject><points>550,95</points><labeltext>Exhibit</labeltext><labelfontsize>10</labelfontsize></labelobject>
 </labelobjects>
 </genericobjects>
